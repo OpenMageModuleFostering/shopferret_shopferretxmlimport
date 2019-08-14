@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Shopferret_Shopferretxmlimport",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "The best and fastest way to find things to buy. Add your products to the millions already viewed daily.",
+    "authors": [
+    {
+        "name": "Shop",
+        "email": "james.grace@thepoolhub.com.au"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
