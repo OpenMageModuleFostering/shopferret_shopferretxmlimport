@@ -8,7 +8,8 @@ class Shopferret_Shopferretxmlimport_Model_Observer{
         $block->setText(
         '<script src="http://www.shopferret.com.au/flat-visual-chat/flat-visual-chat.js"></script>'
         );        
-        $layout->getBlock('head')->append($block);    
+        if($layout->getBlock('head'))
+			$layout->getBlock('head')->append($block);    
 	}
 	
 	//Whenever there is generate of sale order this observer is called
@@ -79,10 +80,13 @@ class Shopferret_Shopferretxmlimport_Model_Observer{
 				$__fields['brand'] = trim($_product->getAttributeText('brand'));
 			else
 				$__fields['brand'] = "";
-			$__fields['description'] = trim($_product->getDescription());
+			
+			$__fields['description'] = strip_tags(trim($_product->getDescription()));
 			$__fields['qty'] = trim(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty());
 			$__fields['is_in_stock'] = trim(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getIsInStock());
 			
+			$__fields['price'] = Mage::helper('core')->currency($__fields['price'], true, false);
+
 			$cats = $_product->getCategoryIds();
 			$LoSCategory = "";
 			foreach ($cats as $category_id) {

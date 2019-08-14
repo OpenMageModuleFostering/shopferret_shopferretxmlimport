@@ -134,10 +134,12 @@ class Shopferret_Shopferretxmlimport_IndexController extends Mage_Core_Controlle
 			else
 				$__fields['brand'] = "";
 			
-			$__fields['description'] = trim($_product->getDescription());
+			$__fields['description'] = strip_tags(trim($_product->getDescription()));
 			$__fields['qty'] = trim(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty());
 			$__fields['is_in_stock'] = trim(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getIsInStock());
 			
+			$__fields['price'] = Mage::helper('core')->currency($__fields['price'], true, false);
+
 			$cats = $_product->getCategoryIds();
 			$LoSCategory = "";
 			foreach ($cats as $category_id) {
@@ -244,10 +246,13 @@ class Shopferret_Shopferretxmlimport_IndexController extends Mage_Core_Controlle
 			else
 				$__fields['brand'] = "";
 			
-			$__fields['description'] = trim($_product->getDescription());
+			$__fields['description'] = strip_tags(trim($_product->getDescription()));
+
 			$__fields['qty'] = trim(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty());
 			$__fields['is_in_stock'] = trim(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getIsInStock());
 			
+			$__fields['price'] = Mage::helper('core')->currency($__fields['price'], true, false);
+
 			$cats = $_product->getCategoryIds();
 			$LoSCategory = "";
 			foreach ($cats as $category_id) {
@@ -543,7 +548,8 @@ class Shopferret_Shopferretxmlimport_IndexController extends Mage_Core_Controlle
 			$line['sku'] = $_product->getSku();
 			$line['quantity'] = (int)$prod->getQtyOrdered();
 			$line['name'] = $prod->getName();
-			$line['price'] = (int)$prod->getPrice();	
+			$line['price'] = (int)$prod->getPrice();
+			$line['price'] = Mage::helper('core')->currency($line['price'], true, false);
 			$line['itemId'] = (int)$prod->getProductId();		
 			$lines[] = $line;
 			

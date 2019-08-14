@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>Shopferret_Shopferretxmlimport</name>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OSL</license>
     <channel>community</channel>
     <extends/>
     <summary>The best and fastest way to find things to buy. Add your products to the millions already viewed daily.</summary>
-    <description>Shopferret is the best and fastest way to find things to buy online. Now you can add your products to the millions already viewed daily on Shopferret by simply installing this instant plugin. Your products will be published and kept up to date instantly, faster and more accurate that google. With instant product search and a host of other optional features Shopferret can even add chat and comprehensive statistics to your magento experience.</description>
-    <notes>This is first version of the package</notes>
+    <description>Shopferret is the best and fastest way to find things to buy online. Now you can add your products to the millions already viewed daily on Shopferret by simply installing this instant plugin. Your products will be published and kept up to date instantly, faster and more accurate that google.</description>
+    <notes>Bug Fix 1.0</notes>
     <authors><author><name>Shop</name><user>shopferret</user><email>james.grace@thepoolhub.com.au</email></author></authors>
-    <date>2015-03-09</date>
-    <time>04:00:38</time>
-    <contents><target name="magecommunity"><dir><dir name="Shopferret"><dir name="Shopferretxmlimport"><dir name="Block"><file name="Index.php" hash="38a7d39de254edb608a1d94f8508b281"/></dir><dir name="Helper"><file name="Data.php" hash="6700bc0e881f5891b7ad4ce903b164ed"/></dir><dir name="Model"><file name="Cron.php" hash="a33c646a371f052b0dee64541a561d91"/><file name="Observer.php" hash="7fc5ea6fd1aeb152384bbdbee27ccc51"/></dir><dir name="controllers"><file name="IndexController.php" hash="5f90d43f6aa5edba4e9449cb80c468cb"/><file name="ModuleupdatorController.php" hash="80383061d341a9d4698aa1ee82e588e2"/></dir><dir name="etc"><file name="adminhtml.xml" hash="d77b559f4226829f7fa06026f139a539"/><file name="config.xml" hash="eb3d20129fd9bdd49c0564da3b54bfcf"/><file name="system.xml" hash="196216d07a269c42a4e73ed1625c65ce"/></dir><dir name="sql"><dir name="shopferretxmlimport_setup"><file name="mysql4-install-0.1.1.php" hash="0cdea9e0ea6215d6c6345a6735972560"/></dir></dir></dir></dir></dir></target><target name="magedesign"><dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="shopferretxmlimport.xml" hash="16cd469b6ed21b1d57e8eb5bc4e13b17"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir><dir name="modules"><file name="Shopferret_Shopferretxmlimport.xml" hash="37a44cc02ece94d97d0e2e997cb31eef"/></dir></dir></target></contents>
+    <date>2015-03-10</date>
+    <time>09:38:45</time>
+    <contents><target name="magecommunity"><dir><dir name="Shopferret"><dir name="Shopferretxmlimport"><dir name="Block"><file name="Index.php" hash="38a7d39de254edb608a1d94f8508b281"/></dir><dir name="Helper"><file name="Data.php" hash="6700bc0e881f5891b7ad4ce903b164ed"/></dir><dir name="Model"><file name="Cron.php" hash="7d6b4392dcb0a5f144c42602cccfeead"/><file name="Observer.php" hash="91de465161abfbd6d30db10c76a035e9"/></dir><dir name="controllers"><file name="IndexController.php" hash="9ead1ab2f7b0a686404f263f867838c1"/><file name="ModuleupdatorController.php" hash="80383061d341a9d4698aa1ee82e588e2"/></dir><dir name="etc"><file name="adminhtml.xml" hash="d77b559f4226829f7fa06026f139a539"/><file name="config.xml" hash="79f6b0343056a0b2a39c91a279baaee8"/><file name="system.xml" hash="196216d07a269c42a4e73ed1625c65ce"/></dir><dir name="sql"><dir name="shopferretxmlimport_setup"><file name="mysql4-install-0.1.2.php" hash="0cdea9e0ea6215d6c6345a6735972560"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir><dir name="modules"><file name="Shopferret_Shopferretxmlimport.xml" hash="ad823722a9eda39133864d800bfa882e"/></dir></dir></target><target name="magedesign"><dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="shopferretxmlimport.xml" hash="16cd469b6ed21b1d57e8eb5bc4e13b17"/></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

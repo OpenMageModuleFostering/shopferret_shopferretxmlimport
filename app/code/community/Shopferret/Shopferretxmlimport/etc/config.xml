@@ -2,7 +2,7 @@
 <config>
   <modules>
     <Shopferret_Shopferretxmlimport>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
     </Shopferret_Shopferretxmlimport>
   </modules>
   <frontend>
@@ -115,13 +115,5 @@
 			</observers>
 		</checkout_submit_all_after>
 	  </events>
-  </global>	
-  <crontab>
-        <jobs>            
-			<shopferretxmlimport_cronupdate>
-                <schedule><cron_expr>5 0 * * *</cron_expr></schedule>
-                <run><model>shopferretxmlimport/cron::discountindex</model></run>
-            </shopferretxmlimport_cronupdate>
-        </jobs>
-    </crontab>  
+  </global>	  
 </config> 

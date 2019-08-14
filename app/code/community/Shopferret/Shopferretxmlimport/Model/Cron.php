@@ -96,10 +96,11 @@ class Shopferret_Shopferretxmlimport_Model_Cron{
 				$__fields['brand'] = trim($_product->getAttributeText('brand'));
 			else
 				$__fields['brand'] = "";
-			$__fields['description'] = trim($_product->getDescription());
+			
+			$__fields['description'] = strip_tags(trim($_product->getDescription()));
 			$__fields['qty'] = trim(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty());
 			$__fields['is_in_stock'] = trim(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getIsInStock());
-			
+			$__fields['price'] = Mage::helper('core')->currency($__fields['price'], true, false);
 			$cats = $_product->getCategoryIds();
 			$LoSCategory = "";
 			foreach ($cats as $category_id) {
@@ -279,11 +280,11 @@ class Shopferret_Shopferretxmlimport_Model_Cron{
 			else
 				$__fields['size'] = "";
 				
-			$__fields['brand'] = trim($_product->getAttributeText('brand'));
-			$__fields['description'] = trim($_product->getDescription());
+			$__fields['brand'] = trim($_product->getAttributeText('brand'));			
+			$__fields['description'] = strip_tags(trim($_product->getDescription()));
 			$__fields['qty'] = trim(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty());
 			$__fields['is_in_stock'] = trim(Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getIsInStock());
-			
+			$__fields['price'] = Mage::helper('core')->currency($__fields['price'], true, false);
 			$cats = $_product->getCategoryIds();
 			$LoSCategory = "";
 			foreach ($cats as $category_id) {
