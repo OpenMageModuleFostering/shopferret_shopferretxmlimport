@@ -15,11 +15,11 @@ class Shopferret_Shopferretxmlimport_Model_Cron{
 
 
 		$resource = Mage::getSingleton('core/resource');
-			$readConnection = $resource->getConnection('core_read');
-			$table = $resource->getTableName('core_config_data');
-			$query = 'SELECT value FROM ' . $table . ' WHERE path = "web/secure/base_url" LIMIT 1';
-			$url = $readConnection->fetchOne($query);	
-			$LoSXMLData = base64_encode($url);	
+		$readConnection = $resource->getConnection('core_read');
+		$table = $resource->getTableName('core_config_data');
+		$query = 'SELECT value FROM ' . $table . ' WHERE path = "web/secure/base_url" LIMIT 1';
+		$url = $readConnection->fetchOne($query);	
+		$LoSXMLData = base64_encode($url);	
 
 		
 		$LoILastProductId = 0;
