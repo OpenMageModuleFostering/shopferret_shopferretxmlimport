@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Shopferret_Shopferretxmlimport",
+    "name": "openmage-module-fostering\/shopferret_shopferretxmlimport",
     "type": "magento-module",
-    "license": "OSL",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "The best and fastest way to find things to buy. Add your products to the millions already viewed daily.",
     "authors": [
